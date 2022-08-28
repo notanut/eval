@@ -1,0 +1,218 @@
+.explanations {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1vw;
+    max-width: 900px;
+    
+    h2 {
+        font-family: 'Poppins', sans-serif;
+        text-transform: uppercase;
+        font-style: italic;
+        color: $brown;
+        font-size: 2vw;
+    }
+
+    &__qna {
+        color: $brown;
+
+        h1 {
+            font-family: 'Bebas Neue', cursive;
+            font-size: $h1;
+            font-weight: 400;
+        }
+
+        h2 {
+            padding: 1em 0;
+        }
+
+        p {
+            font-family: 'Poppins', sans-serif;
+            font-size: $p;
+            padding: .75rem 0;
+        }
+                
+        img {
+            width: 12vw;
+            height: auto;
+        }
+
+        .option {
+            cursor: pointer;
+            max-width: 575px;
+            min-width: 100%;
+            outline: none;
+            border: 3px solid $cream;
+            border-radius: 67.5px;
+            font-family: 'Poppins', sans-serif;
+            padding: .65vw 1.5vw;
+            background-color: $brown;
+            color: $cream;
+            font-weight: 700;
+            font-size: $option-text;
+        
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 1rem;
+            transition: all .2s ease-in;
+            text-align: left;
+        
+        
+            span {
+                font-family: 'Bebas Neue', cursive;
+                background-color: $cream;
+                color: $brown;
+                font-weight: 400;
+                border-radius: 50%;
+                padding: 1.5px 1.25vw;
+                font-size: $abc;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all .2s ease-in;
+            }
+            
+            &:hover {
+                border: 3px solid $brown;
+                background-color: $cream;
+                color: $brown;
+            
+                span {
+                    color: $cream;
+                    background-color: $brown;
+                }
+            }
+        }
+    }
+
+    &__explanation {
+            width: 27.5vw;
+                            
+            p {
+                color: $brown;
+                font-family: 'Poppins', sans-serif;
+                margin: 1.5em 0;
+                border: 2px dashed $brown;
+                border-radius: 2rem;
+                padding: 1.5em;
+            }
+
+            img {
+                width: 20vw;
+                height: auto;
+
+            }
+
+            .directions {
+                text-align: right;
+
+                button {
+                    cursor: pointer;
+                    background: none;
+                    outline: none;
+                    border: none;
+
+                    svg {
+                        color: $brown;
+                        stroke: $brown;
+                        transition: all .2s ease-in;
+    
+                        &:hover {
+                            opacity: 75%;
+                        }
+                    }
+    
+                }
+                
+                .hidden {
+                    display: none;
+                }
+
+            }
+    }
+}
+
+@media (min-width: 1000px) {
+    .explanations {
+        &__explanation {
+            img {
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .explanations {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        width: 75vw;
+
+        h2 {
+            font-size: 3.5vw;
+        }
+
+        &__qna {
+            h1 {
+                font-size: 4rem;
+            }
+
+            p {
+                font-size: 2rem;
+            }
+
+            img {
+                width: 22vw;
+            }
+
+            .option {
+                min-width: 0;
+                font-size: 2.5vw;
+                padding: 1.5vw;
+                width: 100%;
+
+                span {
+                        font-size: 4vw;
+                        padding: 1px 2.5vw;
+                    }
+            }
+        }
+
+        &__explanation {
+            width: 100%;
+
+            img {
+                width: 30vw;
+            }
+        }
+
+    }
+}
+
+@media (max-width: 450px) {
+    .explanations {
+
+        &__qna {
+            h1 {
+                font-size: 3.5rem;
+            }
+
+            p {
+                font-size: 1.5rem;
+            }
+            
+            .option {
+                font-size: 4vw;
+                padding: 1.5vw;
+
+                span {
+                    font-size: 6vw;
+                    padding: 1px 2.5vw;
+                }
+            }
+
+        }
+    }
+}

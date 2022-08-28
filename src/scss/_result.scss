@@ -1,0 +1,80 @@
+.result {
+    text-align: center;
+    h1 {
+        font-family: 'Bebas Neue', cursive;
+        font-size: $h1;
+        font-weight: 400;
+        color: $brown;
+    }
+    .choices {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        padding-top: 1rem;
+
+        .exp, .try {
+            cursor: pointer;
+            padding: 1vw 2vw;
+            border-radius: 50px;
+            text-transform: uppercase;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1vw;
+        }
+        
+        .exp {
+            border: none;
+            background-color: $brown;
+            color: $cream;
+            border: 3px solid $brown;
+            transition: all .2s ease-in;
+            
+            &:hover {
+                background-color: $cream;
+                color: $brown;
+            }
+        }
+        
+        .try {
+            border: 3px solid $brown;
+            background-color: $cream;
+            color: $brown;
+            transition: all .2s ease-in;
+
+            &:hover {
+                background-color: $brown;
+                color: $cream;
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .result {
+        h1 {
+            font-size: 4rem;
+        }
+        .choices {
+            .exp, .try {
+                font-size: 3vw;
+                padding: 1.5vw;
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .result {
+        font-size: 3rem;
+        .choices {
+            flex-direction: column;
+            .exp,
+                .try {
+                    font-size: 4.75vw;
+                    padding: 2vw;
+                    width: 100%;
+                }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+@import "./scss/reset";
+@import './scss/variables';
+@import "./scss/question";
+@import "./scss/explanation";
+@import "./scss/result";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,400;0,700;1,700&display=swap');
+
+body {
+    background-color: $cream;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    padding: 2rem;
+    min-width: 75vw;
+}

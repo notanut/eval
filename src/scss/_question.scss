@@ -1,0 +1,138 @@
+.questions {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 3vw;
+    max-width: 900px;
+
+    &__question {
+        color: $brown;
+        width: 100%;
+
+        h1 {
+            font-family: 'Bebas Neue', cursive;
+            font-size: $h1;
+            font-weight: 400;
+            padding-top: 0;
+        }
+
+        p {
+            font-family: 'Poppins', sans-serif;
+            font-size: $p;
+            padding: .75rem 0;
+            max-width: 659.2px;
+        }
+
+        img {
+            width: 12vw;
+            height: auto;
+        }
+    }
+
+    &__options {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 1.25rem;
+        width: 100%;
+        height: 100%;
+
+        button {
+            cursor: pointer;
+            max-width: 575px;
+            min-width: 100%;
+            outline: none;
+            border: 3px solid $cream;
+            border-radius: 67.5px;
+            font-family: 'Poppins', sans-serif;
+            padding: .65vw 1.5vw;
+            background-color: $brown;
+            color: $cream;
+            font-weight: 700;
+            font-size: $option-text;
+
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 1rem;
+            transition: all .2s ease-in;
+            text-align: left;
+            
+            
+            span {
+                font-family: 'Bebas Neue', cursive;
+                background-color: $cream;
+                color: $brown;
+                font-weight: 400;
+                border-radius: 50%;
+                padding: 1.5px 1.25vw;
+                font-size: $abc;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all .2s ease-in;
+            }
+
+            &:hover {
+                border: 3px solid $brown;
+                background-color: $cream;
+                color: $brown;
+
+                span {
+                    color: $cream;
+                    background-color: $brown;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .questions {
+        flex-direction: column;
+
+        &__question {
+            h1 {
+                font-size: 4rem;
+            }
+
+            p {
+                font-size: 2rem;
+            }
+
+            img {
+                width: 22vw;
+            }
+        }
+
+        &__options {
+            padding-top: 2rem;
+            button {
+                font-size: 4vw;
+                padding: 2.5vw;
+
+                span {
+                    font-size: 5vw;
+                    padding: 0 2.75vw;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .questions {
+
+        &__question {
+            h1 {
+                font-size: 3.5rem;
+            }
+
+            p {
+                font-size: 1.75rem;
+            }
+
+        }
+    }
+}
