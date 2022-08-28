@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import data from "../data"
 
 const Context = React.createContext();
@@ -10,11 +9,13 @@ const ContextProvider = ({ children }) => {
     const [score, setScore] = useState(1)
     const [correctAnswer, setCorrectAnswer] = useState(0)
 
+
     const [result, setResult] = useState(0)
+    const [showResult, setShowResult] = useState(false)
 
     const [exp, setExp] = useState(0)
+    const [showExp, setShowExp] = useState(false)
     const explain = data[exp]
-    let navigate = useNavigate()
 
 
     const handleOption = (isCorrect) => {
@@ -33,14 +34,12 @@ const ContextProvider = ({ children }) => {
             } else {
                 setResult(Math.round((score / data.length) * 100))
             }
-            navigate("/result")
+            setShowResult(true)
+            // navigate("/result")
         }
     }
 
-    const backHome = () => {
-        navigate("/")
-        window.location.reload()
-    }
+
 
     const handleBack = () => {
         if (exp > 0) {
@@ -52,7 +51,7 @@ const ContextProvider = ({ children }) => {
         if (exp < 14) {
             setExp(exp + 1)
         } else {
-            backHome()
+            window.location.reload()
         }
     }
 
@@ -72,7 +71,9 @@ const ContextProvider = ({ children }) => {
             explain,
             handleBack,
             handleNext,
-            backHome
+            showExp,
+            setShowExp,
+            showResult
 
         }}>
             {children}

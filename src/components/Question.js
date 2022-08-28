@@ -1,11 +1,13 @@
 import { useContext } from "react"
 import { Context } from "../context/Context"
+import Result from "./Result"
 
 const Question = () => {
   const context = useContext(Context)
   const { id, question, img, options} = context.qna
   return (
     <>
+    {context.showResult ? <Result /> : (
       <section className="questions">
         <article className="questions__question">
             <h1>soal #{id}</h1>
@@ -21,6 +23,7 @@ const Question = () => {
         )))}
       </article>
     </section>
+    )}
     </>
   )
 }

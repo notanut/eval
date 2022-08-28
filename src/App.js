@@ -6,17 +6,11 @@ import Result from "./components/Result";
 
 function App() {
   return (
-    <Router>
       <ContextProvider>
         <main>
-          <Routes>
-            <Route path="/" element={<Question />} />
-            <Route path="/result" element={<Result />} />
-            <Route path="/explanation" element={<Explanation />} />
-          </Routes>
+          <Question />
         </main>
       </ContextProvider>
-    </Router>
   );
 }
 
