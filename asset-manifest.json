@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/eval/static/css/main.573e490a.css",
+    "main.js": "/eval/static/js/main.2ae3bc71.js",
+    "static/media/curve-tool.png": "/eval/static/media/curve-tool.a775386a208874bc20c2.png",
+    "static/media/group-people.png": "/eval/static/media/group-people.8406d8b6ef623921f614.png",
+    "index.html": "/eval/index.html",
+    "main.573e490a.css.map": "/eval/static/css/main.573e490a.css.map",
+    "main.2ae3bc71.js.map": "/eval/static/js/main.2ae3bc71.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.573e490a.css",
+    "static/js/main.2ae3bc71.js"
+  ]
+}
